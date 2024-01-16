@@ -25,6 +25,10 @@ Optionally, you could use the Dockerfile to build the image:
 ```bash
 cd docker && sh build.sh
 ```
+Alternatively, to pull the pre-built image from Docker Hub and tag it for local use, execute: 
+```bash
+docker pull tviskaron/mats-lp && docker tag tviskaron/mats-lp mats-lp
+```
 
 ## Running MATS-LP:
 
