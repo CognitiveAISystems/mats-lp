@@ -7,10 +7,14 @@ from pogema import pogema_v0
 import re
 from copy import deepcopy
 from pogema import GridConfig
+from pogema.wrappers.metrics import LifeLongAverageThroughputMetric
+from pogema.wrappers.multi_time_limit import MultiTimeLimit
 
 from env.custom_maps import MAPS_REGISTRY
 from pogema.generator import generate_new_target
 from typing import Literal
+
+from env.warehouse_wfi import WarehouseWFI
 
 
 class DecMAPFConfig(GridConfig):
@@ -56,12 +60,18 @@ class ProvideGlobalObstacles(gymnasium.Wrapper):
 
 
 def create_env_base(config: DecMAPFConfig):
-    env = pogema_v0(grid_config=config)
-    env = ProvideGlobalObstacles(env)
-    env = MultiMapWrapper(env)
-    if config.with_animation:
-        env = AnimationMonitor(env, AnimationConfig(directory='renders'))
+    if config.map_name == 'wfi_warehouse':
+        env = WarehouseWFI(grid_config=config)
+        env = ProvideGlobalObstacles(env)
+        env = MultiTimeLimit(env, config.max_episode_steps)
+        env = LifeLongAverageThroughputMetric(env)
+    else:
+        env = pogema_v0(grid_config=config)
+        env = ProvideGlobalObstacles(env)
+        env = MultiMapWrapper(env)
 
+    if config.with_animation:
+        env = AnimationMonitor(env, AnimationConfig(directory='renders', show_lines=True))
     return env
 
 

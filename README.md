@@ -26,11 +26,6 @@ Optionally, you could use the Dockerfile to build the image:
 cd docker && sh build.sh
 ```
 
-Or to pull the image: 
-```bash
-docker pull tviskaron/mats-lp && docker tag tviskaron/mats-lp mats-lp
-```
-
 ## Running MATS-LP:
 
 To execute the **MATS-LP** algorithm and produce an animation using pre-trained weights of CostTracer, use the following command:
@@ -39,15 +34,21 @@ To execute the **MATS-LP** algorithm and produce an animation using pre-trained 
 python3 main.py
 ```
 
-The animation will be stored in the ```renders``` folder.
+You can adjust the environment and algorithm's parameters using arguments. For example:
+
+```bash
+python3 main.py --map_name wfi_warehouse --num_agents 10
+python3 main.py --map_name pico_s24_od30_na32 --num_agents 10 --seed 42
+python3 main.py --map_name mazes-s0_wc8_od55 --num_expansions 500 --num_threads 8
+```
+
+The animation will be stored in the `renders` folder.
+The default parameters of MATS-LP are set to the values used in the paper.
 
 Using docker: 
 ```bash
 docker run --rm -ti -v $(pwd):/code -w /code mats-lp python3 main.py
 ```
-
-The hyperparameters of **MATS-LP** can be adjusted via ```MCTSConfig``` in ```main.py``` file.
-The defaults of the parameters are set to the values used in the paper.
 
 ## Citation:
 

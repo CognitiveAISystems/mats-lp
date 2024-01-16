@@ -50,17 +50,16 @@ class MCTSConfig(AlgoBase, extra=Extra.forbid):
     use_move_limits: bool = True
     agents_as_obstacles: bool = False
     render: bool = False
-    reward_type: Literal['basic', 'g2rl', 'cost2go'] = 'cost2go'
+    reward_type: Literal['cost2go'] = 'cost2go'
     obs_radius: int = 5
     random_action_chance: float = 0.6
     ppo_only: bool = False
     use_nn_module: bool = True
     agents_to_plan: int = 3
-    preprocessing: str = 'MCTSPreprocessing'
     path_to_weights: str = 'cost-tracer.onnx'
     num_threads: int = 8
     progressed_reward: float = 0.1
-    collision_system: Literal['block_both', 'priority', 'soft'] = 'soft'
+    collision_system: Literal['soft'] = 'soft'
     pb_c_init: float = 4.44
 
 
