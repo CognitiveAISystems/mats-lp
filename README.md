@@ -26,6 +26,11 @@ Optionally, you could use the Dockerfile to build the image:
 cd docker && sh build.sh
 ```
 
+Or to pull the image: 
+```bash
+docker pull tviskaron/mats-lp && docker tag tviskaron/mats-lp mats-lp
+```
+
 ## Running MATS-LP:
 
 To execute the **MATS-LP** algorithm and produce an animation using pre-trained weights of CostTracer, use the following command:
