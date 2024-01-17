@@ -51,7 +51,7 @@ The default parameters of MATS-LP are set to the values used in the paper.
 
 Using docker: 
 ```bash
-docker run --rm -ti -v $(pwd):/code -w /code mats-lp python3 main.py
+docker run --rm -ti -u $(id -u):$(id -g) -v $(pwd):/code -w /code mats-lp python3 main.py
 ```
 
 ## Citation:
