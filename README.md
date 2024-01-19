@@ -1,9 +1,16 @@
-# MATS-LP
+<div align="center">
+
+[![Example](https://raw.githubusercontent.com/Tviskaron/pogema-svg/main/mats-lp-ep00001-half-maze-seed0.svg)](https://github.com/AIRI-Institute/mats-lp) 
+
+**Decentralized Monte Carlo Tree Search for Partially Observable Multi-agent Pathfinding**
+
+</div> 
 
 This study addresses the challenging problem of decentralized lifelong multi-agent pathfinding. The proposed **MATS-LP** 
 approach utilizes a combination of Monte Carlo Tree Search and reinforcement learning for resolving conflicts.
 
 **Paper:** [Decentralized Monte Carlo Tree Search for Partially Observable Multi-agent Pathfinding](https://arxiv.org/abs/2312.15908)
+
 
 ## Installation:
 
