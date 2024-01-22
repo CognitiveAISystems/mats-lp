@@ -61,6 +61,13 @@ Using docker:
 docker run --rm -ti -u $(id -u):$(id -g) -v $(pwd):/code -w /code mats-lp python3 main.py
 ```
 
+## Raw Data: 
+
+
+
+The raw data, comprising the results of our experiments for MATS-LP, can be downloaded from the following link:
+[Download Raw Data](https://github.com/AIRI-Institute/mats-lp/releases/download/v0/mats-lp-raw-data.zip)
+
 ## Citation:
 
 If you find this code helpful in your research, please cite our paper as follows:
