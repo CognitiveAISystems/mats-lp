@@ -1,5 +1,4 @@
 pyyaml
-numpy>=1.21.5,<=1.23.1
 pydantic>=1.8.2,<=1.9.1
 pogema==1.2.2
 pybind11>=2.10.0
