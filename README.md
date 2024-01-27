@@ -2,7 +2,13 @@
 
 [![Example](https://raw.githubusercontent.com/Tviskaron/pogema-svg/main/mats-lp-ep00001-half-maze-seed0.svg)](https://github.com/AIRI-Institute/mats-lp) 
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1CwDqAbbu-UJParx172Z1nEv-YsQY0Roh?usp=sharing)
+[![arXiv](https://img.shields.io/badge/arXiv-2312.15908-b31b1b.svg)](https://arxiv.org/abs/2312.15908)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Decentralized Monte Carlo Tree Search for Partially Observable Multi-agent Pathfinding**
+
+
 
 </div> 
 
@@ -60,6 +66,10 @@ Using docker:
 ```bash
 docker run --rm -ti -u $(id -u):$(id -g) -v $(pwd):/code -w /code mats-lp python3 main.py
 ```
+
+We offer a Google Colab example that simplifies the process:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1CwDqAbbu-UJParx172Z1nEv-YsQY0Roh?usp=sharing)
+
 
 ## Raw Data: 
 
